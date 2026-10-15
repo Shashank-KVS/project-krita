@@ -1,0 +1,19 @@
+---
+import Base from '../layouts/Base.astro';
+const base = `${import.meta.env.BASE_URL.replace(/\/+$/, '')}/`;
+---
+
+<Base title="Page not found" description="The requested Project Krita page could not be found.">
+  <div class="container error-page">
+    <div class="error-code">404</div>
+    <div class="eyebrow">PROJECT KRITA / NAVIGATION</div>
+    <h1>This path is not part of the map.</h1>
+    <p class="lead">
+      The page may have moved, or the link may be outdated. Return to the overview or continue into the platform architecture.
+    </p>
+    <div class="hero-buttons error-actions">
+      <a class="button button-dark" href={base}>Back to overview</a>
+      <a class="button button-light" href={`${base}architecture/`}>Explore architecture ↗</a>
+    </div>
+  </div>
+</Base>
