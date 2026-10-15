@@ -58,3 +58,6 @@ The landing page now introduces the business problem, explains Krita in plain la
 ### Runtime
 
 Use **Node.js 22.19 or newer** (or a supported newer LTS version). From `docs-site/`, run `npm ci` and `npm run dev`. The source archive intentionally excludes `.node-env`, `node_modules`, and generated build files. The npm dependency installation and production build were not successfully completed in the authoring environment; run `npm run build` locally to validate before deployment.
+
+## Link for the site
+`https://shashank-kvs.github.io/project-krita/`
