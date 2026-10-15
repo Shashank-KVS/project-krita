@@ -5,7 +5,7 @@ interface Props {
 }
 
 const { items = [] } = Astro.props;
-const base = import.meta.env.BASE_URL;
+const base = `${import.meta.env.BASE_URL.replace(/\/+$/, '')}/`;
 ---
 
 <div class="diagramrow">
