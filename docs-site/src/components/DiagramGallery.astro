@@ -1,5 +1,32 @@
+
 ---
-const {items=[]}=Astro.props;
-const base=import.meta.env.BASE_URL;
+interface Props {
+  items?: [string, string][];
+}
+
+const { items = [] } = Astro.props;
+const base = import.meta.env.BASE_URL;
 ---
-<div class="diagramrow">{items.map(([id,title])=><figure><a href={`${base}diagrams/${id}.png`} target="_blank" rel="noopener"><img class="diagram" src={`${base}diagrams/${id}.png`} alt={title} loading="lazy"/></a><figcaption>{title} · Proposed target architecture · Open full size ↗</figcaption></figure>)}</div>
+
+<div class="diagramrow">
+  {items.map(([id, title]) => (
+    <figure>
+      <a
+        href={`${base}diagrams/${id}.png`}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img
+          class="diagram"
+          src={`${base}diagrams/${id}.png`}
+          alt={title}
+          loading="lazy"
+        />
+      </a>
+
+      <figcaption>
+        {title} · Proposed target architecture · Open full size ↗
+      </figcaption>
+    </figure>
+  ))}
+</div>

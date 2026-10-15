@@ -1,2 +1,7 @@
 import { defineConfig } from 'astro/config';
-export default defineConfig({output:'static',site:'https://example.github.io',base:process.env.BASE_PATH || '/'});
+
+export default defineConfig({
+    site: 'https://shashank-kvs.github.io',
+    base: '/project-krita',
+    output: 'static',
+});
